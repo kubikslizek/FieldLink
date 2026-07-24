@@ -1,5 +1,6 @@
 # FieldLink
-A tactical field communication device. Something like a walkie - talkie, but better.
+A tactical field communication and navigation device built on the popular ESP32 microcontroller. Its main goal is to serve as a compact outdoor tool that everyone can use and understand. All of the features are listed below. Some of the features arent actually implemented yet, as I am currently working on them and ensuring they are going to work perfectly.
+
 
 # FEATURES:
 - Live GPS tracking
@@ -8,6 +9,7 @@ A tactical field communication device. Something like a walkie - talkie, but bet
 - Waypoint navigation
 - Compass mode
 - Smooth UI with audio feedback
+
 
 # PARTS LIST:
 
@@ -36,3 +38,49 @@ WIRING & ASSEMBLY
 - Heat shrink tubing
 - Screws
 - Custom 3D printed enclosure
+
+
+# PINOUT
+
+| Function        | ESP32 GPIO |
+| --------------- | ---------: |
+| TFT SCK         |         18 |
+| TFT MOSI        |         23 |
+| TFT CS          |          5 |
+| TFT DC          |          2 |
+| TFT RST         |          4 |
+| Joystick X      |         26 |
+| Joystick Y      |         27 |
+| Joystick Button |         13 |
+| GPS RX          |         16 |
+| GPS TX          |         17 |
+| Compass SDA     |         21 |
+| Compass SCL     |         22 |
+| nRF24 CE        |         15 |
+| nRF24 CSN       |         14 |
+| Battery ADC     |         34 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
