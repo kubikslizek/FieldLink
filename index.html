@@ -2,64 +2,240 @@
 <html>
 
 <head>
+
 <title>FieldLink</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
 
 <style>
 
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #eee;
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
+* {
+    box-sizing: border-box;
 }
+
+
+body {
+
+    font-family: "Inter", Arial, sans-serif;
+
+    background:
+    radial-gradient(circle at top, #00383d 0%, #111 35%);
+
+    color: #e8ffff;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 40px 25px;
+
+}
+
+
 
 h1 {
+
     color: #00ffff;
-    font-size: 40px;
+
+    font-size: 52px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
 }
+
+
+
+.subtitle {
+
+    color: #aaa;
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+
+}
+
+
 
 h2 {
+
     color: #00ffff;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+
+    font-size: 26px;
+
+    margin-top: 45px;
+
+    border-left: 4px solid #00ffff;
+
+    padding-left: 12px;
+
 }
+
+
+
+h3 {
+
+    color: #fff;
+
+    margin-top: 25px;
+
+}
+
+
 
 p {
-    line-height: 1.6;
+
+    line-height: 1.7;
+
+    color: #ccc;
+
 }
 
-li {
-    margin: 8px;
+
+
+ul {
+
+    background: #161616;
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+
+    padding: 20px 35px;
+
 }
+
+
+
+li {
+
+    margin: 10px 0;
+
+}
+
+
+
+.card {
+
+    background: rgba(20,20,20,0.8);
+
+    border: 1px solid #333;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    margin-top: 20px;
+
+}
+
 
 
 table {
+
     width: 100%;
+
     border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
 }
+
+
 
 td, th {
-    border: 1px solid #555;
-    padding: 8px;
+
+    border: 1px solid #333;
+
+    padding: 12px;
+
+    text-align: left;
+
 }
 
+
+
 th {
-    background: #222;
+
+    background: #00383d;
+
+    color: #00ffff;
+
 }
+
+
+
+tr:nth-child(even) {
+
+    background: #171717;
+
+}
+
+
+
+.gallery {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
 
 
 .gallery img {
+
     width: 300px;
-    margin: 10px;
-    border-radius: 10px;
+
+    margin: 12px;
+
+    border-radius: 16px;
+
+    border: 1px solid #333;
+
+    transition: 0.3s;
+
 }
+
+
+
+.gallery img:hover {
+
+    transform: scale(1.05);
+
+    border-color: #00ffff;
+
+}
+
 
 
 .badge {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #00383d;
+
     color: #00ffff;
+
+    margin-right: 8px;
+
+    font-size: 14px;
+
 }
+
 
 
 </style>
@@ -67,35 +243,81 @@ th {
 </head>
 
 
+
 <body>
+
 
 
 <h1>FieldLink</h1>
 
+<div>
+
+<span class="badge">ESP32</span>
+<span class="badge">GPS</span>
+<span class="badge">nRF24</span>
+<span class="badge">TFT UI</span>
+
+</div>
+
+
+<p class="subtitle">
+
+A tactical field communication and navigation device designed around the ESP32 microcontroller.
+
+</p>
+
+
+
+
+<div class="card">
 
 <p>
-A tactical field communication and navigation device built on the popular ESP32 microcontroller.
-Its main goal is to serve as a compact outdoor tool that everyone can use and understand.
-Some features are still under development as the project is actively being improved.
+
+FieldLink is a compact outdoor communication and navigation tool.
+The goal is to create a simple, reliable device that combines location tracking,
+short-range digital communication and an intuitive user interface.
+
+Some features are still under active development.
+
 </p>
+
+</div>
+
+
 
 
 
 <h2>FEATURES</h2>
 
+<div class="card">
+
 <ul>
+
 <li>Live GPS tracking</li>
+
 <li>nRF24 chat communication</li>
+
 <li>Navigation to another device</li>
+
 <li>Waypoint navigation</li>
+
 <li>Compass mode</li>
-<li>Smooth UI with audio feedback</li>
+
+<li>Smooth custom UI with audio feedback</li>
+
 </ul>
+
+</div>
+
+
 
 
 
 
 <h2>PARTS LIST</h2>
+
+
+<div class="card">
 
 
 <h3>CORE ELECTRONICS</h3>
@@ -143,6 +365,10 @@ Some features are still under development as the project is actively being impro
 </ul>
 
 
+</div>
+
+
+
 
 
 
@@ -182,18 +408,25 @@ Some features are still under development as the project is actively being impro
 
 
 
+
+
 <h2>GALLERY</h2>
 
+
 <p>
-Photos of the current prototype:
+Current prototype interface:
 </p>
+
 
 
 <div class="gallery">
 
 <img src="Chat.png">
+
 <img src="Compass.png">
+
 <img src="GPS.png">
+
 <img src="Menu.png">
 
 </div>
@@ -201,4 +434,5 @@ Photos of the current prototype:
 
 
 </body>
+
 </html>
