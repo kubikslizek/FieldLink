@@ -1,43 +1,205 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>FieldLink</title>
 
 <style>
+
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #111;
-    color: white;
-    text-align: center;
+    color: #eee;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
 }
 
-img {
-    max-width: 500px;
+h1 {
+    color: #00ffff;
+    font-size: 40px;
+}
+
+h2 {
+    color: #00ffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+li {
+    margin: 8px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #555;
+    padding: 8px;
+}
+
+th {
+    background: #222;
+}
+
+
+.gallery img {
+    width: 300px;
+    margin: 10px;
     border-radius: 10px;
 }
+
+
+.badge {
+    color: #00ffff;
+}
+
+
 </style>
 
 </head>
 
+
 <body>
+
 
 <h1>FieldLink</h1>
 
-<p>
-ESP32 based handheld navigation and communication device.
-</p>
-
-<img src="images/fieldlink_front.jpg">
-
-<h2>Features</h2>
 
 <p>
-GPS navigation<br>
-Digital chat<br>
-Compass<br>
-Custom TFT interface<br>
-Battery powered portable design
+A tactical field communication and navigation device built on the popular ESP32 microcontroller.
+Its main goal is to serve as a compact outdoor tool that everyone can use and understand.
+Some features are still under development as the project is actively being improved.
 </p>
+
+
+
+<h2>FEATURES</h2>
+
+<ul>
+<li>Live GPS tracking</li>
+<li>nRF24 chat communication</li>
+<li>Navigation to another device</li>
+<li>Waypoint navigation</li>
+<li>Compass mode</li>
+<li>Smooth UI with audio feedback</li>
+</ul>
+
+
+
+
+<h2>PARTS LIST</h2>
+
+
+<h3>CORE ELECTRONICS</h3>
+
+<ul>
+<li>ESP32 DevKit</li>
+<li>nRF24L01 radio module with antenna</li>
+<li>NEO-6M GPS module</li>
+<li>QMC5883L magnetometer module</li>
+</ul>
+
+
+
+<h3>UI</h3>
+
+<ul>
+<li>Analog joystick</li>
+<li>Water resistant buttons</li>
+<li>ST7735 1.8" TFT color screen</li>
+<li>Piezo buzzer</li>
+</ul>
+
+
+
+<h3>POWER</h3>
+
+<ul>
+<li>18650 4.2V Li-ion cell</li>
+<li>TP4056 battery charger</li>
+<li>ON/OFF switch</li>
+<li>Female USB Type-C port extender</li>
+<li>Boost converter + stabiliser</li>
+</ul>
+
+
+
+<h3>WIRING & ASSEMBLY</h3>
+
+<ul>
+<li>Dupont wires</li>
+<li>Pin headers</li>
+<li>Heat shrink tubing</li>
+<li>Screws</li>
+<li>Custom 3D printed enclosure</li>
+</ul>
+
+
+
+
+
+<h2>PINOUT</h2>
+
+
+<table>
+
+<tr>
+<th>Function</th>
+<th>ESP32 GPIO</th>
+</tr>
+
+<tr><td>TFT SCK</td><td>18</td></tr>
+<tr><td>TFT MOSI</td><td>23</td></tr>
+<tr><td>TFT CS</td><td>5</td></tr>
+<tr><td>TFT DC</td><td>2</td></tr>
+<tr><td>TFT RST</td><td>4</td></tr>
+
+<tr><td>Joystick X</td><td>26</td></tr>
+<tr><td>Joystick Y</td><td>27</td></tr>
+<tr><td>Joystick Button</td><td>13</td></tr>
+
+<tr><td>GPS RX</td><td>16</td></tr>
+<tr><td>GPS TX</td><td>17</td></tr>
+
+<tr><td>Compass SDA</td><td>21</td></tr>
+<tr><td>Compass SCL</td><td>22</td></tr>
+
+<tr><td>nRF24 CE</td><td>15</td></tr>
+<tr><td>nRF24 CSN</td><td>14</td></tr>
+
+<tr><td>Battery ADC</td><td>34</td></tr>
+
+</table>
+
+
+
+
+<h2>GALLERY</h2>
+
+<p>
+Photos of the current prototype:
+</p>
+
+
+<div class="gallery">
+
+<!-- Add images here -->
+
+<img src="images/front.jpg">
+<img src="images/inside.jpg">
+<img src="images/ui.jpg">
+
+</div>
+
+
 
 </body>
 </html>
