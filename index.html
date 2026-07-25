@@ -192,18 +192,42 @@ tr:nth-child(even) {
 
 
 
-.gallery img {
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+
+.gallery figure {
+    margin: 0;
     width: 300px;
-
-    margin: 12px;
-
-    border-radius: 16px;
-
+    background: #1b1b1b;
+    border-radius: 14px;
+    overflow: hidden;
     border: 1px solid #333;
+}
 
-    transition: 0.3s;
 
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+
+.gallery figcaption {
+    padding: 12px;
+    text-align: center;
+    color: #ccc;
+}
+
+
+video {
+    border-radius: 15px;
+    border: 1px solid #333;
+    margin-top: 15px;
+}
 }
 
 
